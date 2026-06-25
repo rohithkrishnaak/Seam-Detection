@@ -1,4 +1,4 @@
-# Weld Seam Detector — `seam_detector2.py`
+# Weld Seam Detector — `seam_detector.py`
 
 > Sub-pixel laser-line seam detection using **Steger's Ridge Algorithm**, **Hessian eigen-analysis**, and **Triangular Fuzzy Number (TFN)** segment pairing.
 
@@ -40,7 +40,7 @@
 
 ## Overview
 
-`seam_detector2.py` detects the **physical seam (joint) between two metal plates** using a line laser and a single camera image. When a line laser is projected across two metal pieces held at an angle, the laser bends visibly at the joint — that bend point is the seam.
+`seam_detector.py` detects the **physical seam (joint) between two metal plates** using a line laser and a single camera image. When a line laser is projected across two metal pieces held at an angle, the laser bends visibly at the joint — that bend point is the seam.
 
 The tool locates this bend to **sub-pixel accuracy** (< 0.1 px), which is approximately 10× better than traditional blob-centroid methods, without requiring any additional hardware.
 
@@ -643,7 +643,7 @@ Half-length of the drawn green line in pixels. Increase for tall images, decreas
 
 ```
 project/
-├── seam_detector2.py       # Main detection module (this file)
+├── seam_detector.py       # Main detection module (this file)
 ├── run_and_eval.py         # Batch evaluation against ground-truth annotations
 ├── analyze_gt.py           # Ground-truth point extraction from annotated images
 ├── debug_segments.py       # Per-image segment diagnostics (with/without angle filter)
